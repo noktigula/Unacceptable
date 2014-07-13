@@ -1,5 +1,6 @@
 package ru.nstudio.unacceptable.app;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -18,6 +19,12 @@ public class MainActivity extends Activity implements View.OnClickListener
 		
 		m_unacceptable = (Button)findViewById( R.id.buttonLemon );
 		m_unacceptable.setOnClickListener( this );
+
+        ActionBar actionBar = getActionBar();
+        if(actionBar != null)
+        {
+            actionBar.hide();
+        }
     }
 
 	@Override
